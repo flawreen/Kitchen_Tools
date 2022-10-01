@@ -27,6 +27,7 @@ local.properties
 .idea/tasks.xml
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/discord.xml
 /out/
 
 # OS temporary files
