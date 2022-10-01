@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kitchen Tools</string>
+    <string name="hint_cups_number">Cups of flour</string>
+    <string name="grams_info">(g)</string>
+    <string name="ounces_info">(oz)</string>
+    <string name="calculate">Calculate</string>
+    <string name="flour_result_text">Result: %s %s</string>
+    <string name="choose_measurement_unit">Choose measurement unit.</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="add_btn">Add</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="amount">Amount</string>
+</resources>

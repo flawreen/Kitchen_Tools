@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_flour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cups_number_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cups_number_text"
+        app:srcCompat="@drawable/ic_flour" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cups_number_text"
+        style="?attr/textInputOutlinedStyle"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_cups_number"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintStart_toEndOf="@id/icon_flour"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cups_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/convert_cups_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toBottomOf="@id/cups_number_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cups_number_text"
+        app:layout_constraintTop_toTopOf="@id/cups_number_text" />
+
+    <ImageView
+        android:id="@+id/icon_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/choose_unit"
+        app:srcCompat="@drawable/ic_grams_ounces" />
+
+    <TextView
+        android:id="@+id/choose_unit"
+        style="@style/Widget.KitchenTools.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/choose_measurement_unit"
+        app:layout_constraintBottom_toBottomOf="@+id/grams_ounces_switch"
+        app:layout_constraintStart_toEndOf="@id/icon_switch"
+        app:layout_constraintTop_toTopOf="@id/grams_ounces_switch" />
+
+    <TextView
+        android:id="@+id/ounces_text"
+        style="@style/Widget.KitchenTools.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/ounces_info"
+        app:layout_constraintBottom_toBottomOf="@id/grams_ounces_switch"
+        app:layout_constraintEnd_toStartOf="@id/grams_ounces_switch"
+        app:layout_constraintTop_toTopOf="@id/grams_ounces_switch" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/grams_ounces_switch"
+        style="@style/Widget.KitchenTools.CompoundButton.Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintEnd_toStartOf="@id/grams_text"
+        app:layout_constraintTop_toBottomOf="@id/cups_number_text" />
+
+    <TextView
+        android:id="@+id/grams_text"
+        style="@style/Widget.KitchenTools.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/grams_info"
+        app:layout_constraintBottom_toBottomOf="@id/grams_ounces_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/grams_ounces_switch" />
+
+    <TextView
+        android:id="@+id/flour_result"
+        style="@style/Widget.KitchenTools.TextView"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_unit"
+        tools:text="120 grams" />
+
+    <ImageView
+        android:id="@+id/icon_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ingredient_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ingredient_add"
+        app:srcCompat="@drawable/ic_add" />
+
+    <EditText
+        android:id="@+id/ingredient_add"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingredient"
+        android:inputType="text"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@id/choose_unit"
+        app:layout_constraintTop_toBottomOf="@id/flour_result" />
+
+    <EditText
+        android:id="@+id/amount_add"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount"
+        android:inputType="numberDecimal"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@id/ingredient_add"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_add" />
+
+    <Button
+        android:id="@+id/ingredient_add_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_btn"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@id/ingredient_add"
+        app:layout_constraintTop_toBottomOf="@id/amount_add"/>
+
+    <TextView
+        android:id="@+id/ingredients_text"
+        style="@style/Widget.KitchenTools.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_add_btn"
+        android:text="@string/ingredients" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ingredients_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
