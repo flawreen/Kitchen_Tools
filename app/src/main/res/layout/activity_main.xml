@@ -39,7 +39,6 @@
 
     <Button
         android:id="@+id/convert_cups_button"
-        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calculate"
@@ -57,7 +56,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/choose_unit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/choose_unit"
-        app:srcCompat="@drawable/ic_grams_ounces" />
+        app:srcCompat="@drawable/ic_grams" />
 
     <TextView
         android:id="@+id/choose_unit"
@@ -147,7 +146,6 @@
 
     <Button
         android:id="@+id/ingredient_add_btn"
-        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_btn"
@@ -161,6 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ingredient_add_btn"
